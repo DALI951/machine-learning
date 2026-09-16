@@ -1,0 +1,1 @@
+{"gen": 1, "fitness": 60.5, "pts": 1, "opp": 1, "hits": 62, "timestamp": "2026-09-16T23:53:12.600519", "program": [["BALL_BELOW", "DOWN"], ["COMING", "UP"], ["BALL_LEFT", "DOWN"]], "text": "BALL_BELOW->DOWN  COMING->UP  BALL_LEFT->DOWN"}

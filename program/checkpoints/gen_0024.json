@@ -1,0 +1,1 @@
+{"gen": 24, "fitness": 290.0, "pts": 11, "opp": 0, "hits": 80, "timestamp": "2026-09-16T23:44:31.183298", "program": [["BALL_BELOW", "DOWN"], ["COMING", "UP"], ["GOING", "UP"], ["BALL_BELOW", "DOWN"], ["COMING", "DOWN"], ["CLOSE", "UP"], ["COMING", "UP"]], "text": "BALL_BELOW->DOWN  COMING->UP  GOING->UP  BALL_BELOW->DOWN  COMING->DOWN  CLOSE->UP  COMING->UP"}
