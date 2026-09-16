@@ -1,0 +1,18 @@
+
+=== RUN 2026-09-16T22:51:44.299921 seed=42 pop=80 elite=10 mut_rate=0.15 sigma=0.25 crossover=0.5 gens=8 ===
+
+=== RUN 2026-09-16T22:51:54.649708 seed=42 pop=80 elite=10 mut_rate=0.15 sigma=0.25 crossover=0.5 gens=8 ===
+
+=== RUN 2026-09-16T22:52:09.195646 seed=42 pop=80 elite=10 mut_rate=0.15 sigma=0.25 crossover=0.5 gens=8 ===
+
+MILESTONE gen 1: FIRST BIRD SURVIVES 100+ FRAMES
+MILESTONE gen 1: FIRST PIPE PASSED
+2026-09-16T22:52:09.223504 gen=1 best=202.0 avg=39.7 score=1 alive=102 dt=0.03s
+2026-09-16T22:52:09.256611 gen=2 best=56.0 avg=48.8 score=0 alive=56 dt=0.02s
+2026-09-16T22:52:09.291691 gen=3 best=206.0 avg=53.3 score=1 alive=106 dt=0.03s
+2026-09-16T22:52:09.323372 gen=4 best=201.0 avg=53.0 score=1 alive=101 dt=0.02s
+2026-09-16T22:52:09.359290 gen=5 best=205.0 avg=54.7 score=1 alive=105 dt=0.03s
+2026-09-16T22:52:09.394817 gen=6 best=203.0 avg=58.6 score=1 alive=103 dt=0.03s
+2026-09-16T22:52:09.429972 gen=7 best=206.0 avg=64.2 score=1 alive=106 dt=0.03s
+2026-09-16T22:52:09.466684 gen=8 best=205.0 avg=64.5 score=1 alive=105 dt=0.03s
+=== END best_fit_ever=206.0 ===
