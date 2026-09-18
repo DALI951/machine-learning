@@ -57,6 +57,20 @@ def select(pop, fit, rng):
     return np.vstack([elites, np.array(children)])
 
 
+def save_best(gen, genome, fitness, score, alive):
+    """Write best.json only (no checkpoint file). Binary-safe, atomic-ish."""
+    data = {
+        "gen": gen,
+        "fitness": float(fitness),
+        "score": int(score),
+        "alive": int(alive),
+        "timestamp": datetime.datetime.now().isoformat(),
+        "genome": genome.tolist(),
+    }
+    with open("best.json", "w") as f:
+        json.dump(data, f)
+
+
 def save_checkpoint(gen, genome, fitness, score, alive, tag="ckpt"):
     os.makedirs(CKPT_DIR, exist_ok=True)
     data = {
@@ -70,8 +84,7 @@ def save_checkpoint(gen, genome, fitness, score, alive, tag="ckpt"):
     path = os.path.join(CKPT_DIR, f"gen_{gen:04d}.json")
     with open(path, "w") as f:
         json.dump(data, f)
-    with open("best.json", "w") as f:
-        json.dump(data, f)
+    save_best(gen, genome, fitness, score, alive)
     return path
 
 

@@ -20,7 +20,7 @@ import numpy as np
 from flappy_env import (COURT_W, COURT_H, BIRD_X, BIRD_R, PIPE_W, GAP_H,
                         FlappyGame, SingleFlappy)
 from brain import decide, decide_batch
-from evolve import make_pop, select, POP
+from evolve import make_pop, select, save_best, POP
 
 SCALE = 8
 BG = "#0a0a0f"
@@ -44,6 +44,7 @@ class LiveTrain:
         self.avg_fit = 0.0
         self.best_score = 0
         self.best_genome = None
+        self.best_fit_ever = -1e18   # for persisting best.json on new best
         self.history = []          # (gen, best_fit)
         self.speed_changes = []    # (gen, speed) markers on the chart
         self.game = None
@@ -107,6 +108,10 @@ class LiveTrain:
                     self.avg_fit = float(fit.mean())
                     self.best_score = int(score.max())
                     self.best_genome = pop[best_i].copy()
+                    if self.best_fit > self.best_fit_ever:
+                        self.best_fit_ever = self.best_fit
+                        save_best(self.gen, self.best_genome, self.best_fit_ever,
+                                  self.best_score, int(alive.max()))
                     self.history.append((self.gen, self.best_fit))
                     if len(self.history) > 3000:
                         self.history.pop(0)
