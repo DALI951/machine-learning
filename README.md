@@ -11,7 +11,7 @@ emerge from evolution.
 | Folder | Game | Learner controls | Learned result |
 |--------|------|------------------|----------------|
 | `pong/` | Pong vs scripted AI | paddle up/down (neural net) | **100 wins / 0 losses / 0 draws** vs scripted AI (400 gens) |
-| `flappy/` | Flappy Bird | flap or don't flap (neural net) | learned to play (19 pipes) |
+| `flappy/` | Flappy Bird | flap or don't flap (neural net) | **perfect 66/66 full clear**; avg 39.3 pipes / 1817 frames over 100 games (900 gens) |
 | `program/` | Pong vs scripted AI | paddle up/down (**writes its own code**) | **100 wins / 0 losses / 0 draws** — the machine wrote a program that never loses (150 gens) |
 
 ## How each folder works
